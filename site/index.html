@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hopscreen</title>
+<style>
+:root{--bg:#fafaf8;--fg:#1c1c1e;--muted:#6e6e73;--card:#fff;--line:#e5e5ea;--accent:#0a66ff}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#f2f2f7;--muted:#98989f;--card:#1f1f22;--line:#2f2f33;--accent:#4d8dff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+main{max-width:640px;margin:0 auto;padding:56px 16px}
+h1{font-size:40px;margin:0 0 4px;letter-spacing:-.02em}
+.sub{color:var(--muted);margin:0 0 32px}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:12px 22px;border-radius:10px;font-weight:600}
+.meta{color:var(--muted);font-size:14px;margin-top:8px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-top:28px}
+h2{font-size:17px;margin:0 0 8px}
+ol{margin:0;padding-left:20px}
+code{font:13px ui-monospace,Menlo,monospace;background:var(--line);padding:2px 6px;border-radius:5px;word-break:break-all}
+pre{overflow-x:auto;background:var(--line);padding:10px 12px;border-radius:8px}
+pre code{background:none;padding:0}
+</style>
+</head>
+<body>
+<main>
+  <h1>Hopscreen</h1>
+  <p class="sub">菜单栏一键切换显示器输入源（DDC/CI），支持全局快捷键。Apple Silicon Mac。</p>
+  <a class="btn" href="Hopscreen.zip" download>下载 Hopscreen.zip</a>
+  <div class="meta">v1.0 · macOS 13+ · Apple Silicon</div>
+
+  <section>
+    <h2>安装</h2>
+    <ol>
+      <li>解压，把 <code>Hopscreen.app</code> 拖进「应用程序」。</li>
+      <li>应用没有 Apple 签名，第一次打开会被拦下。在终端运行：
+        <pre><code>xattr -dr com.apple.quarantine /Applications/Hopscreen.app</code></pre>
+        或者去「系统设置 → 隐私与安全性」点「仍要打开」。</li>
+      <li>菜单栏会出现一个双屏图标。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>设置</h2>
+    <ol>
+      <li><b>Hotkey → …</b>：选择快捷键要切到的输入（这台电脑要“跳走”去的那一路）。</li>
+      <li>默认快捷键 <code>⌃⌥⌘I</code>，可在 <b>Change Hotkey…</b> 修改。</li>
+      <li>输入码不对？在 <b>Inputs → Read Current Input Code</b> 读取当前值，再用 <b>Add Input…</b> 添加。Dell 常见值：USB-C 0x19 / 0x1B，HDMI 0x11，DP 0x0F。</li>
+      <li>勾选 <b>Launch at Login</b> 开机启动。</li>
+    </ol>
+  </section>
+</main>
+</body>
+</html>

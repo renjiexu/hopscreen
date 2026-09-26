@@ -1,0 +1,4 @@
+build/
+site/Hopscreen.zip
+.netlify/
+.DS_Store
