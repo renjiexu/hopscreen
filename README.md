@@ -17,7 +17,7 @@ Made for the common setup of **one monitor shared by two computers** (say a Mac 
 
 ## Install
 
-Download `Hopscreen.zip` from [Releases](../../releases/latest), unzip it, and move `Hopscreen.app` to Applications.
+Download `Hopscreen.zip` from [Releases](../../releases), unzip it, and move `Hopscreen.app` to Applications.
 
 If macOS says the app can't be opened (this happens for builds that aren't notarized yet), run:
 

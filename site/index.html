@@ -27,7 +27,7 @@ pre code{background:none;padding:0}
   <h1>Hopscreen</h1>
   <p class="sub">菜单栏一键切换显示器输入源（DDC/CI），支持全局快捷键。Apple Silicon Mac。</p>
   <a class="btn" href="Hopscreen.zip" download>下载 Hopscreen.zip</a>
-  <div class="meta">v1.0 · macOS 13+ · Apple Silicon</div>
+  <div class="meta">v0.9.0 · macOS 13+ · Apple Silicon · <a href="https://github.com/renjiexu/hopscreen">GitHub</a></div>
 
   <section>
     <h2>安装</h2>
@@ -43,9 +43,9 @@ pre code{background:none;padding:0}
   <section>
     <h2>设置</h2>
     <ol>
-      <li><b>Hotkey → …</b>：选择快捷键要切到的输入（这台电脑要“跳走”去的那一路）。</li>
-      <li>默认快捷键 <code>⌃⌥⌘I</code>，可在 <b>Change Hotkey…</b> 修改。</li>
-      <li>输入码不对？在 <b>Inputs → Read Current Input Code</b> 读取当前值，再用 <b>Add Input…</b> 添加。Dell 常见值：USB-C 0x19 / 0x1B，HDMI 0x11，DP 0x0F。</li>
+      <li>两台电脑都装上 Hopscreen。</li>
+      <li>在每台电脑上：<b>Hotkeys → 另一台电脑的输入 → Set Shortcut…</b>，比如都设成 <code>⌃⌥⌘I</code>，按一下就跳到另一台。</li>
+      <li>输入码不对？让显示器显示那一路时，用 <b>Inputs → Read Current Input</b> 读取，再 <b>Add Input…</b> 添加。常见值：HDMI 0x11，DP 0x0F，Thunderbolt/USB-C 0x19 或 0x1B。</li>
       <li>勾选 <b>Launch at Login</b> 开机启动。</li>
     </ol>
   </section>
